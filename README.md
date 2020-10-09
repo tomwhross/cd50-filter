@@ -31,3 +31,14 @@ Example applying grey scale:
 ```
 $ ./filter -g images/yard.bmp out.bmp
 ```
+
+
+## Compiling
+
+Run the following to compile a new version:
+
+```
+$ make -B filter
+```
+
+Note the `-B` flag (for `always-make`) may or may not be required depending on your setup
