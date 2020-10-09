@@ -42,3 +42,24 @@ $ make -B filter
 ```
 
 Note the `-B` flag (for `always-make`) may or may not be required depending on your setup
+
+
+## MacOS & Docker
+
+If you are running on a version of MacOS on a version later than Mojave, C development can be somewhat
+difficult. [One solution is to use Docker](https://noahloomans.com/tutorials/docker-valgrind/). To compile or run this program, or to debug it or run valgrind
+on it, run the following first:
+
+```
+$ docker run -it --rm -v "$PWD":/usr/src/filter  nloomans/codam
+```
+
+This will allow you to perform actions like the following with ease:
+
+```
+# cd usr/src/filter
+# make -B filter
+# valgrind ./filter -r images/yard.bmp reflect_yard.bmp
+# ./filter -g images/yard.bmp out.bmp
+```
+
