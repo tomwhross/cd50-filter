@@ -87,7 +87,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
 
     // create an array to store the original image
-    int line[height][width][3];
+    int line[height + 1][width + 1][3];
 
     for (int i = 0; i < height; i++)
     {
@@ -124,7 +124,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     // create an array to store the original image
-    int line[height][width][3];
+    int line[height + 1][width + 1][3];
 
     // read and store the original image into the array copy
     for (int i = 0; i < height; i++)
